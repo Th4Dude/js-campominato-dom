@@ -6,7 +6,7 @@ const containerCells = document.querySelector('.container-cells')
 
 let bottone = document.querySelector(".button-01");
 
-bottone.addEventListener("click", function() {
+bottone.addEventListener("click", function () {
     let container = document.querySelector('.container-cells');
     container.classList.toggle("mostra");
     console.log(container)
@@ -17,31 +17,57 @@ bottone.addEventListener("click", function() {
 /* -------functions------- */
 
 
-function createCell(elemento, nomeClass, valore){
+function createCell(elemento, nomeClass, valore) {
     const cellElement = document.createElement(elemento);
     cellElement.classList.add(nomeClass);
     cellElement.innerText = valore;
-    cellElement.addEventListener('click', function(){
+    cellElement.addEventListener('click', function () {
         console.log(valore);
         cellElement.classList.toggle('color-blue')
     })
     return cellElement;
 }
 
-function containerCellsAppend(container, elemento){
+function containerCellsAppend(container, elemento) {
     container.append(elemento);
 }
+
 
 /* -------functions------- */
 
 /* Ciclo for */
 
-let cellNumber = 100
+/* function campoMinato() {
 
-for( let i = 1 ; i <= cellNumber; i++){
-    const elementoCreato = createCell('div' , 'cell' , i );
-    containerCellsAppend(containerCells,elementoCreato);
+
+} */
+
+let cellNumber ;
+
+let level = 2 ;
+
+for (let i = 1; i <= cellNumber; i++) {
+    const elementoCreato = createCell('div', 'cell', i);
+    containerCellsAppend(containerCells, elementoCreato);
+    switch (level) {
+        case 2:
+            cellNumber = 81;
+            break;
+
+        case 3:
+            cellNumber = 49;
+            break;
+
+        case 1:
+        default:
+            cellNumber = 100;
+    }
+    console.log()
 }
 
 /* Ciclo for */
+
+
+
+
 
