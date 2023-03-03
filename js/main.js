@@ -8,20 +8,20 @@ let bottone = document.querySelector(".button-01");
 let cellNumber ;
 let level ;
 bottone.addEventListener("click", function () {
-    let level = 
+    let level = document.querySelector('.difficult').value;
     let container = document.querySelector('.container-cells');
     container.classList.toggle("mostra");
     console.log(container)
     switch (level) {
-        case 2:
+        case 'normal':
             cellNumber = 81;
             break;
 
-        case 3:
+        case 'hard':
             cellNumber = 49;
             break;
 
-        case 1:
+        case 'easy':
         default:
             cellNumber = 100;
     }
