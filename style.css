@@ -1,0 +1,119 @@
+/* ---RESET--- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---RESET--- */
+
+/* ------------------------------------------- */
+
+/* ---COMMON--- */
+
+.container-main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-center {
+    background-color: cornflowerblue;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-top,
+.container-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.color-violet {
+    color: blueviolet;
+}
+
+.padding-15 {
+    padding: 15px;
+}
+
+/* ---COMMON--- */
+
+/* ------------------------------------------- */
+
+/* ---HEADER--- */
+
+.logo {
+    height: 3.75rem;
+    width: 3.75rem;
+}
+
+.button-01 {
+    background-color: cornflowerblue;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: .9375rem;
+    border: 1px solid black;
+}
+
+button:hover {
+    color: blueviolet;
+}
+
+/* ---HEADER--- */
+
+/* ------------------------------------------- */
+
+/* ---MAIN--- */
+
+
+.container-cells {
+    height: 34.375rem;
+    width: 34.375rem;
+    background-color: rgb(130, 222, 228);
+    /* border-radius: .3125rem; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    display: none;
+}
+
+.mostra {
+    display: inherit;
+}
+
+.cell {
+    width: calc(100% / 10);
+    height: calc(100% /10);
+    border: .0625rem solid black;
+}
+
+.color-blue {
+    background-color: rgb(63, 18, 227);
+}
+
+/* ---MAIN--- */
+
+/* ------------------------------------------- */
+
+/* ---FOOTER--- */
+
+
+/* ---FOOTER--- */
+
+/* ------------------------------------------- */
