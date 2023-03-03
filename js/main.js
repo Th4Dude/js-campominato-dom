@@ -5,8 +5,13 @@ const containerCells = document.querySelector('.container-cells')
 /*-------event bottone------- */
 
 let bottone = document.querySelector(".button-01");
-let cellNumber ;
-let level ;
+
+let easy = document.querySelector('.easy')
+
+let cellNumber;
+
+let level;
+
 bottone.addEventListener("click", function () {
     let level = document.querySelector('.difficult').value;
     let container = document.querySelector('.container-cells');
@@ -25,9 +30,13 @@ bottone.addEventListener("click", function () {
         default:
             cellNumber = 100;
     }
+    const cells = document.querySelectorAll('.cell');
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].remove()
+    }
     for (let i = 1; i <= cellNumber; i++) {
         const elementoCreato = createCell('div', 'cell', i);
-        containerCellsAppend(containerCells, elementoCreato); 
+        containerCellsAppend(containerCells, elementoCreato);
         console.log()
     }
 });
