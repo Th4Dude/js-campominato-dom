@@ -116,9 +116,15 @@ img {
     height: calc(100% / 7);
 }
 
-.color-blue {
+.blue {
     background-color: rgb(32, 18, 237);
 }
+
+.red{
+    background-color: rgb(237, 13, 13);
+}
+
+
 
 /* ---MAIN--- */
 
