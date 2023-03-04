@@ -1,4 +1,4 @@
-/* ---RESET--- */
+/* Reset */
 
 * {
     margin: 0;
@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* ---RESET--- */
+/* Reset */
 
 /* ------------------------------------------- */
 
@@ -18,31 +18,9 @@
     flex-direction: column;
 }
 
-.container-center {
-    background-color: cornflowerblue;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-top,
-.container-bottom {
-    display: flex;
-    justify-content: space-between;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-}
-
-.color-violet {
-    color: blueviolet;
-}
-
-.padding-15 {
-    padding: 15px;
+img {
+    width: 3.75rem;
+    height: 3.75rem;
 }
 
 /* ---COMMON--- */
@@ -51,12 +29,29 @@
 
 /* ---HEADER--- */
 
-.logo {
-    height: 3.75rem;
-    width: 3.75rem;
+.container-top {
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    color: blueviolet;
 }
 
-.button-01 {
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.container-logo h1 {
+    padding-left: 10px;
+}
+
+.container-bottomi {
+    margin-left: auto;
+}
+
+.btn {
     background-color: cornflowerblue;
     border: none;
     color: rgb(0, 0, 0);
@@ -70,8 +65,7 @@
     border-radius: .9375rem;
     border: 1px solid black;
 }
-
-button:hover {
+.btn:hover {
     color: blueviolet;
 }
 
@@ -81,42 +75,49 @@ button:hover {
 
 /* ---MAIN--- */
 
+.container-griglia {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    border-radius: .9375rem;
+    border: .1875rem solid black;
+}
 
-.container-cells {
-    height: 34.375rem;
-    width: 34.375rem;
-    background-color: rgb(130, 222, 228);
-    /* border-radius: .3125rem; */
+.board {
+    width: 600px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
-    display: none;
 }
 
-.mostra {
-    display: inherit;
+.cella {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-/* .cell {
-    width: calc(100% / 10);
-    height: calc(100% /10);
-    border: .0625rem solid black;
-} */
-.easy{
+.easy {
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
-.normal{
+
+.normal {
     width: calc(100% / 9);
     height: calc(100% / 9);
 }
-.hard{
+
+.hard {
     width: calc(100% / 7);
     height: calc(100% / 7);
 }
 
 .color-blue {
-    background-color: rgb(63, 18, 227);
+    background-color: rgb(32, 18, 237);
 }
 
 /* ---MAIN--- */
@@ -125,6 +126,11 @@ button:hover {
 
 /* ---FOOTER--- */
 
+footer {
+    background-color: bisque;
+    color: blueviolet;
+    padding: 20px;
+}
 
 /* ---FOOTER--- */
 

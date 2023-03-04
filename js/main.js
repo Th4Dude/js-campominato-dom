@@ -1,85 +1,55 @@
-'use strict'
+'Use strict'
 
-const containerCells = document.querySelector('.container-cells')
+/* queryselectors */
 
-/*-------event bottone------- */
+const container = document.querySelector(".board");
+const button = document.querySelector(".btn");
 
-let bottone = document.querySelector(".button-01");
+/*cell creation  */
 
-let easy = document.querySelector('.easy')
+function appendiCella(container, element){
+    container.append(element);
+}
 
-let cellNumber;
+/* functions */
 
-let level;
-
-bottone.addEventListener("click", function () {
-    let level = document.querySelector('.difficult').value;
-    let container = document.querySelector('.container-cells');
-    container.classList.toggle("mostra");
-    console.log(container)
-    switch (level) {
-        case 'normal':
-            cellNumber = 81;
-            break;
-
-        case 'hard':
-            cellNumber = 49;
-            break;
-
-        case 'easy':
-        default:
-            cellNumber = 100;
-    }
-    const cells = document.querySelectorAll('.cell');
-    for (let i = 0; i < cells.length; i++) {
-        cells[i].remove()
-    }
-    for (let i = 1; i <= cellNumber; i++) {
-        const elementoCreato = createCell('div', 'cell', i);
-        containerCellsAppend(containerCells, elementoCreato);
-        console.log()
-    }
-});
-
-/*-------event bottone------- */
-
-/* -------functions------- */
-
-
-function createCell(elemento, nomeClass, valore) {
-    const cellElement = document.createElement(elemento);
-    cellElement.classList.add(nomeClass);
-    cellElement.innerText = valore;
-    cellElement.addEventListener('click', function () {
-        console.log(valore);
-        cellElement.classList.toggle('color-blue')
+function creaCella(elemento, classe1, classe2, valore){
+    const elementoCreato = document.createElement(elemento);
+    elementoCreato.classList.add(classe1);
+    elementoCreato.classList.add(classe2);
+    elementoCreato.innerText = valore;
+    elementoCreato.addEventListener('click', function(){
+        elementoCreato.classList.add('color-blue');
     })
-    return cellElement;
+
+    return elementoCreato;
 }
 
-function containerCellsAppend(container, elemento) {
-    container.append(elemento);
+/* choose diff */
+
+function start(){
+    const difficult = document.querySelector(".difficult").value;
+    const scelta = difficult;
+    container.innerHTML = '';
+
+    if(scelta === 'normal'){
+        for(let i = 1; i <= 81; i++){
+            const cella = creaCella('div', 'cella', 'normal', i);
+            appendiCella(container, cella);
+        }
+    } else if (scelta === 'hard'){
+        for(let i = 1; i <= 49; i++){
+            const cella = creaCella('div', 'cella', 'hard', i);
+            appendiCella(container, cella);
+        }
+    } else {
+        for(let i = 1; i <= 100; i++){
+            const cella = creaCella('div', 'cella', 'easy', i);
+            appendiCella(container, cella);
+        }
+    }
+
 }
 
-
-/* -------functions------- */
-
-/* Ciclo for */
-
-/* function campoMinato() {
-
-
-} */
-
-
-
-
-
-
-
-/* Ciclo for */
-
-
-
-
-
+/* btn */
+button.addEventListener('click', start);
